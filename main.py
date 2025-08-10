@@ -126,16 +126,18 @@ elif access_mode == "Continue as Guest":
 
 # === Redirect Logic ===
 # ✅ Put this **at the end** after all buttons
-if st.session_state.navigate == "app":
-    st.switch_page("app.py")
-elif st.session_state.navigate == "frontend":
-    st.switch_page("frontend.py")
-elif st.session_state.navigate == "mannual_entry":
-    st.switch_page("mannual_entry.py")
-elif st.session_state.navigate == "personality_quiz":
-    st.switch_page("personality_quiz.py")
+if "navigate" in st.session_state:
+    if st.session_state.navigate == "app":
+       st.switch_page("pages/app.py")
+    elif st.session_state.navigate == "frontend":
+       st.switch_page("pages/frontend.py")
+    elif st.session_state.navigate == "mannual_entry":
+       st.switch_page("pages/mannual_entry.py")
+    elif st.session_state.navigate == "personality_quiz":
+       st.switch_page("pages/personality_quiz.py")
 
 st.markdown("---")
 st.caption("✨ Ready to shape your future with SkillGrow.")
+
 
 
