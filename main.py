@@ -68,7 +68,7 @@ def get_image_base64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-image_path = r"C:\Users\ashwi\Downloads\SkillGrow logo with .png"
+image_path = r"C:/Users/ashwi/Downloads/SkillGrow logo with .png"
 
 if os.path.exists(image_path):
     logo_base64 = get_image_base64(image_path)
@@ -137,3 +137,4 @@ elif st.session_state.navigate == "personality_quiz":
 
 st.markdown("---")
 st.caption("✨ Ready to shape your future with SkillGrow.")
+
